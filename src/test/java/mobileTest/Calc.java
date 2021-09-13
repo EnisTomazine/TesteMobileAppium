@@ -56,23 +56,21 @@ public class Calc  {
         MobileElement btnResultado = (MobileElement) driver.findElementByAccessibilityId("equals");
         btnResultado.click();
         MobileElement lblResultado = (MobileElement) driver.findElementById("com.google.android.calculator:id/result_final");
-        lblResultado.click();
         assertEquals("4", lblResultado.getText());
     }
 
     @Test
     public void testeMultiplicacao() {
-        MobileElement btn8 = (MobileElement) driver.findElementById("com.google.android.calculator:id/digit_8");
-        btn8.click();
-        MobileElement btnDivisao = (MobileElement) driver.findElementByAccessibilityId("divide");
-        btnDivisao.click();
-        MobileElement btn2 = (MobileElement) driver.findElementById("com.google.android.calculator:id/digit_2");
-        btn2.click();
+        MobileElement btn9 = (MobileElement) driver.findElementById("com.google.android.calculator:id/digit_9");
+        btn9.click();
+        MobileElement btnMultiplicacao = (MobileElement) driver.findElementByAccessibilityId("multiply");
+        btnMultiplicacao.click();
+        MobileElement btn3 = (MobileElement) driver.findElementById("com.google.android.calculator:id/digit_3");
+        btn3.click();
         MobileElement btnResultado = (MobileElement) driver.findElementByAccessibilityId("equals");
         btnResultado.click();
         MobileElement lblResultado = (MobileElement) driver.findElementById("com.google.android.calculator:id/result_final");
-        lblResultado.click();
-        assertEquals("4", lblResultado.getText());
+        assertEquals("27", lblResultado.getText());
     }
 
 
